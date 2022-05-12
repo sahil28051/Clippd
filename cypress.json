@@ -1,0 +1,9 @@
+{
+  "projectId": "cerddd",
+  "chromeWebSecurity": false,
+  "viewportWidth": 1366,
+  "viewportHeight": 768,
+  "integrationFolder":"cypress/integration/",
+  "baseUrl":"https://dev.clippd.com/"
+
+}

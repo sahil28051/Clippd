@@ -1,0 +1,11 @@
+{
+    "firstname" : "Test",
+    "lastname" : "Player", 
+    "username": "tester_player01",
+    "year" : "1997",
+    "month" : "Nov",
+    "date" : "10",
+    "gender" : "Male",
+    "playingability" : "Scratch",
+    "country" : "United Kingdom"
+}

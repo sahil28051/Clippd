@@ -1,0 +1,9 @@
+{
+    "#DOB": "dateOfBirth",
+    "#FN": "firstName",
+    "#G": "gender",
+    "#HCP": "hasCreatedProfile",
+    "#LN": "lastName",
+    "#PA": "playingAbility",
+    "#UT": "updatedTime"
+}
