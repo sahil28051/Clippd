@@ -1,6 +1,8 @@
 version: 0.2
 env:
   variables:
+    LT_USERNAME: "sahiltestrig",
+    LT_ACCESS_KEY: "VvPHBy0wUIn975bHAM4Kqtg9MIFFtJKUtScQ3wllleQIr6UKnV",
     CI: "true"
 phases:
   install:
