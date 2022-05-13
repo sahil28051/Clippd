@@ -1,23 +1,18 @@
 version: 0.2
 env:
   variables:
-    LT_USERNAME: "sahiltestrig",
-    LT_ACCESS_KEY: "VvPHBy0wUIn975bHAM4Kqtg9MIFFtJKUtScQ3wllleQIr6UKnV",
     CI: "true"
+    LT_USERNAME: "sahiltestrig"
+    LT_ACCESS_KEY: "VvPHBy0wUIn975bHAM4Kqtg9MIFFtJKUtScQ3wllleQIr6UKnV"
+   
 phases:
   install:
     runtime-versions:
-      nodejs: 14
+      nodejs: 10
   pre_build:
     commands:
-      - TAG="$( echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8 )"
+      - npm install
+      - npm install -g lambdatest-cypress-cli       
   build:
     commands:
-      - curl --connect-timeout 3 -f -LI https://dev.clippd.com -o /dev/null -s
-      - yarn install
-      - yarn cy:run
-  post_build: commands:s
-    - if [ $CODEBUILD_BUILD_SUCCEEDING = 0 ]; then exit 1; fi
-    - printf '[{"name":"automation-suite","imageUri":"%s"}]' "$IMAGE_URI" > images.json
-artifacts:
-  files: images.json
+      - npm run cy:run

@@ -8,27 +8,12 @@
       "browser": "Chrome",
       "platform": "Windows 10",
       "versions": ["latest-1"]
-    },
-    {
-      "browser": "Firefox",
-      "platform": "Windows 10",
-      "versions": ["latest-1"]
-    },
-    {
-      "browser": "Chrome",
-      "platform": "MacOS Monterey",
-      "versions": ["latest-1"]
-    },
-    {
-      "browser": "Firefox",
-      "platform": "MacOS Monterey",
-      "versions": ["latest-1"]
     }
   ],
   "run_settings": {
     "cypress_config_file": "cypress.json",
-    "build_name": "Single test around the greens ",
-    "parallels": 5,
+    "build_name": "Single AWS Test ",
+    "parallels": 1,
     "specs": "./cypress/integration/functional-tests/around-the-green-test.spec.js",
 	
     "ignore_files": "",
@@ -60,6 +45,6 @@
   },
   "tunnel_settings": {
     "tunnel": true,
-    "tunnel_name": ""
+    "tunnel_name": "DESKTOP-Q2SEOQT"
   }
 }
