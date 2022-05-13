@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "yarn cy:run",
+    "cy:run": "lambdatest-cypress run",
     "record": "cypress run --record --key",
     "percy": "percy exec -- cypress run",
     "cy:dev-open": "cypress open --config baseUrl=https://dev.clippd.com",
