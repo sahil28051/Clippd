@@ -13,7 +13,7 @@
   "run_settings": {
     "cypress_config_file": "cypress.json",
     "build_name": "Single AWS Test ",
-    "parallels": 1,
+    "parallels": 5,
     "specs": "./cypress/integration/functional-tests/around-the-green-test.spec.js",
 	
     "ignore_files": "",

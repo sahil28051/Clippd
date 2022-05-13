@@ -1,5 +1,3 @@
-/// <reference types = "cypress-grep"/>
-
 import { loginPage } from "../../support/pageObjects/LoginPage";
 const {
   DEFAULT_COACH_EMAIL: coachemail,
