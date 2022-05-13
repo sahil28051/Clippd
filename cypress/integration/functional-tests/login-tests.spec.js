@@ -18,7 +18,7 @@ describe("Validate Logo", () => {
   // Assert Clippd logo is Visiblesse
   it("verify Clippd logo is Visible", () => {
     loginPage.ClippdLogo().should("be.visible");
-    cy.percySnapshot();
+    cy.screenshot();
   });
 });
 describe("Validate elements on login page", () => {
@@ -60,7 +60,7 @@ describe("Verify Error Messages", () => {
         "contain",
         "You need to add your email and password. Please try again."
       );
-    cy.percySnapshot();
+    cy.screenshot();
   });
   it(
     "Verify error message if user enters Email but leaves Password field blank and click on sign in",
@@ -69,7 +69,7 @@ describe("Verify Error Messages", () => {
       loginPage.emailAddressField().type("test@test.com");
       loginPage.loginButton().click();
       loginPage.alertMessage().should("contain", "Please enter your password");
-      cy.percySnapshot();
+      cy.screenshot();
     }
   );
   it("Please enter a valid email address.", { tags: ["@smoke"] }, () => {
@@ -79,14 +79,14 @@ describe("Verify Error Messages", () => {
     loginPage
       .alertMessage()
       .should("contain", "Please enter a valid email address.");
-    cy.percySnapshot();
+    cy.screenshot();
   });
   it("Login Attempt with valid email address and invalid password", () => {
     loginPage.emailAddressField().type("somanath+coach1@clippd.io");
     loginPage.passwordField().type("Test@@123");
     loginPage.loginButton().click();
     loginPage.alertMessage().contains("Your email and password do not match.");
-    cy.percySnapshot();
+    cy.screenshot();
     //clearing email and password
     loginPage.emailAddressField().clear();
     loginPage.passwordField().clear();
@@ -97,7 +97,7 @@ describe("Verify Coach and Player Login", () => {
     // cy.login("somanath+coach@clippd.io", "ClippdUser2021")
     cy.login(coachemail, coachpassword);
     cy.url().should("contains", "/teams");
-    cy.percySnapshot();
+    cy.screenshot();
   });
   it(
     "Verify player is able to login with valid email and password",
@@ -105,7 +105,7 @@ describe("Verify Coach and Player Login", () => {
     () => {
       cy.login(playeremail, playerpassword);
       cy.url().should("contains", "/dashboard");
-      cy.percySnapshot();
+      cy.screenshot();
     }
   );
 });
